@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: variation-member
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    publisher-confirms: true
+
+server:
+  port: 8201
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+security:
+  oauth2:
+    resource:
+      id: variation-member
+      user-info-uri: http://localhost:8202/auth/api/member
+      prefer-token-info: false
