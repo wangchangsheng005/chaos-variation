@@ -8,6 +8,12 @@
 
 二、缓存   Redis:3.2
 
+    1、windows启动RabbitMq命令，
+    
+    2、在命令窗口中,找到redis安装地址
+    
+    3、使用redis-server redis.windows.conf
+    
 三、消息中间件 RabbitMq:3.7.16
 
 四、消息中间件rabbitMq依赖 Erlang 22.0
@@ -27,6 +33,8 @@ http://localhost:8202
 #auth2认证
 
 http://localhost:8203
+
+
 
 
 

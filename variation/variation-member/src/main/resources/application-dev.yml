@@ -15,7 +15,7 @@ spring:
         probability: 1
     rabbitmq:
         queue: zipkin
-    base-url: http://localhost:8204
+    #base-url: http://localhost:8204
 
 server:
   port: 8201

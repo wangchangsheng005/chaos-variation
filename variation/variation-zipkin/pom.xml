@@ -34,7 +34,6 @@
             <artifactId>zipkin-autoconfigure-collector-rabbitmq</artifactId>
             <version>${zipkin.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
