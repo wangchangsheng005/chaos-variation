@@ -8,15 +8,14 @@ spring:
     password: guest
     virtualHost: /
     publisher-confirms: true
-    #开启zipkin
+  #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
   zipkin:
-    enabled: true
+    sleuth:
+      sampler:
+        probability: 1
+    rabbitmq:
+        queue: zipkin
     base-url: http://localhost:8204
-    #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
-  sleuth:
-    sampler:
-      probability: 1
-
 
 server:
   port: 8201

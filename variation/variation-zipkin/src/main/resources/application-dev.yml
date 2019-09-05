@@ -1,13 +1,10 @@
 spring:
   application:
     name: variation-zipkin
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    virtualHost: /
-    publisher-confirms: true
+  sleuth:
+    enabled: false
+    sampler:
+      probability: 1
 #解决The bean 'characterEncodingFilter', defined in class path resource [zipkin/autoconfigure/ui/ZipkinUiAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class] and overriding is disabled.Action:
   main:
     allow-bean-definition-overriding: true
@@ -27,4 +24,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/
-
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: localhost:5672
+      username: guest
+      password: guest
+      queue: zipkin
