@@ -16,13 +16,13 @@
     <dependencies>
         <!-- web的依赖，必须加 -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-function-web</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--Spring Cloud Config 客户端依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <!--Spring Boot Actuator，感应服务端变化-->
         <dependency>
