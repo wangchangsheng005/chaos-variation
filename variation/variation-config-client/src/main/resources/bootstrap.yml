@@ -6,9 +6,13 @@ spring:
       uri: http://localhost:8206/   #Config server的uri
       profile: auth                        #指定的环境
       label: master                        #指定分支
+
 server:
   port: 8205
 
-  management:
-    security:
-      enabled: false     #SpringBoot 1.5.X 以上默认开通了安全认证，如果不关闭会要求权限
+# 允许/actuator/refresh接口被外部调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

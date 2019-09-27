@@ -22,7 +22,7 @@
         <!--Spring Cloud Config 客户端依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
         <!--Spring Boot Actuator，感应服务端变化-->
         <dependency>
