@@ -15,6 +15,8 @@
         <module>variation-gateway</module>
         <module>variation-email</module>
 		<module>variation-zipkin</module>
+        <module>variation-config-server</module>
+        <module>variation-config-client</module>
     </modules>
     <packaging>pom</packaging>
     <description>variation</description>

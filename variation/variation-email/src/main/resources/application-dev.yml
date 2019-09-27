@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: variation-email
+  mail:
+    default-encoding: UTF-8
+    host: smtp.126.com
+    password: lgw1993
+    port: 25
+    protocol: smtp
+    username: lgw_999
+server:
+  port: 8206
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://admin:123456@localhost:8080/eureka/

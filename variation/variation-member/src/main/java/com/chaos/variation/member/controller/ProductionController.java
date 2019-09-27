@@ -1,5 +1,6 @@
 package com.chaos.variation.member.controller;
 
+import com.chaos.variation.member.service.HelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,13 @@ public class ProductionController{
         String sendMassage = "生产者生产一条消息："+ new Date();
         log.info("==========================:{}",sendMassage);
         this.amqpTemplate.convertAndSend("testQueue",sendMassage);
+    }
+
+    @RequestMapping("/menu")
+    public String menu(){
+        String sendMassage = "增加一条菜单数据："+ new Date();
+        log.info("==========================:{}",sendMassage);
+        return  "";
     }
 
 
