@@ -45,6 +45,10 @@ http://localhost8205
     3、访问http://localhost:8205/api/from 获取配置文件中的from数据
     4、修改gitHub中默认配置信息，执行http://localhost:8025/actuator/refresh
        出现：["config.client.version":"from"] ,表示配置修改成功
+       
+       
+       
+---未完待续。。。       
 
 
 
