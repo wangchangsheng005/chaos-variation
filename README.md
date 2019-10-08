@@ -20,7 +20,7 @@
 
 #注册中心
 
-http://localhost:8080
+http://localhost:8200
 
 #zipkin链路跟踪
 
