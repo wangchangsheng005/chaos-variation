@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: variation-server
+  security:
+    user:
+      name: admin
+      password: 123456
+server:
+  port: 8200
+  waitTimeInMsWhenSyncEmpty: 0
+  enableSelfPreservation: false
+eureka:
+  instance:
+    hostname: 148.70.155.143
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
