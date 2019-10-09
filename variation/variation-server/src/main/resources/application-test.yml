@@ -11,7 +11,7 @@ server:
   enableSelfPreservation: false
 eureka:
   instance:
-    hostname: 148.70.155.143
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
