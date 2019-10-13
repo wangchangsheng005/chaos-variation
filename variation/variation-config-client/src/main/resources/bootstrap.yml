@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8206/   #Config server的uri
-      profile: auth                        #指定的环境
+      profile: auth                       #指定的环境
       label: master                        #指定分支
 
 server:
