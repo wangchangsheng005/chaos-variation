@@ -43,7 +43,7 @@ http://localhost8205
     1、配置中心 启动顺序 variation-server、variation-config-client、varation-config-server
     2、直接访问http://localhost:8206/variation-a.yml  获取默认配置信息
     3、访问http://localhost:8205/api/from 获取配置文件中的from数据
-    4、修改gitHub中默认配置信息，执行http://localhost:8025/actuator/refresh
+    4、修改gitHub中默认配置信息，执行http://localhost:8205/actuator/refresh
        出现：["config.client.version":"from"] ,表示配置修改成功
        
        
