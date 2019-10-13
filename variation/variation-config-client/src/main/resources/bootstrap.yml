@@ -6,7 +6,10 @@ spring:
       uri: http://localhost:8206/   #Config server的uri
       profile: auth                       #指定的环境
       label: master                        #指定分支
-
+      fail-fast: true
+    bus:
+      trace:
+        enabled: true  #开启消息跟踪
 server:
   port: 8205
 

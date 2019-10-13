@@ -4,8 +4,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-    virtualHost: /
-    publisher-confirms: true
 eureka:
   instance:
     prefer-ip-address: true
@@ -18,8 +16,3 @@ eureka:
       enabled: true
       trace:
         enabled: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
