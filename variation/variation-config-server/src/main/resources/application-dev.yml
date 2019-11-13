@@ -16,7 +16,7 @@ spring:
           password: Wcs=123456
 
 server:
-  port: 8206
+  port: 8300
 
 eureka:
   instance:

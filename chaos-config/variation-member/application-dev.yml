@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: variation-member
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    publisher-confirms: true
+  #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
+  zipkin:
+    sleuth:
+      sampler:
+        probability: 1
+    rabbitmq:
+        queue: zipkin
+    #base-url: http://localhost:8204
+
+server:
+  port: 8201
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://admin:123456@106.54.187.182:8200/eureka/
+
+security:
+  oauth2:
+    resource:
+      id: variation-member
+      user-info-uri: http://localhost:8202/auth/api/member
+      prefer-token-info: false

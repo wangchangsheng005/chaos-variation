@@ -57,7 +57,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-        <!-- 整合webservice -->
+        <!-- 整合webservice start -->
         <dependency>
             <groupId>org.apache.axis</groupId>
             <artifactId>axis</artifactId>
@@ -80,8 +80,16 @@
             <artifactId>wsdl4j</artifactId>
             <version>1.6.3</version>
         </dependency>
-
-
+        <!-- 整合webservice end -->
+        <!--hystrix相关-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
 
     </dependencies>
 
