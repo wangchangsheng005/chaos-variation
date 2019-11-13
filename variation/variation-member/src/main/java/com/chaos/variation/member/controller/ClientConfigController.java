@@ -1,4 +1,4 @@
-package com.chaos.variation.client.controller;
+package com.chaos.variation.member.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope //开启更新功能
-@RequestMapping("api")
-public class TestController {
+@RequestMapping("config")
+public class ClientConfigController {
 
     @Value("${from}")
     private String fromValue;
